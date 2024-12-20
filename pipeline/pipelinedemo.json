@@ -55,7 +55,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "inputsource2",
+						"referenceName": "output1",
 						"type": "DatasetReference"
 					}
 				]
