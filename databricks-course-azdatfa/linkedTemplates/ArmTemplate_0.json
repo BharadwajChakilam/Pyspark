@@ -93,6 +93,1984 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage1')]"
 			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/inputsource2')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureBlobStorage1",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"folderPath": "f1_demo/results_managed",
+						"container": "demo"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "{\"txnId\":\"e16f78c7-4c4b-4468-81e8-c83477a91fe6\"",
+						"type": "String"
+					},
+					{
+						"name": "\"tableSizeBytes\":6605",
+						"type": "String"
+					},
+					{
+						"name": "\"numFiles\":1",
+						"type": "String"
+					},
+					{
+						"name": "\"numDeletedRecordsOpt\":0",
+						"type": "String"
+					},
+					{
+						"name": "\"numDeletionVectorsOpt\":0",
+						"type": "String"
+					},
+					{
+						"name": "\"numMetadata\":1",
+						"type": "String"
+					},
+					{
+						"name": "\"numProtocol\":1",
+						"type": "String"
+					},
+					{
+						"name": "\"setTransactions\":[]",
+						"type": "String"
+					},
+					{
+						"name": "\"domainMetadata\":[]",
+						"type": "String"
+					},
+					{
+						"name": "\"metadata\":{\"id\":\"32da6257-06b8-4820-b1ab-1b9961072730\"",
+						"type": "String"
+					},
+					{
+						"name": "\"format\":{\"provider\":\"parquet\"",
+						"type": "String"
+					},
+					{
+						"name": "\"options\":{}}",
+						"type": "String"
+					},
+					{
+						"name": "\"schemaString\":\"{\\\"type\\\":\\\"struct\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"fields\\\":[{\\\"name\\\":\\\"constructorId\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"type\\\":\\\"long\\\"14",
+						"type": "String"
+					},
+					{
+						"name": "\\\"nullable\\\":true15",
+						"type": "String"
+					},
+					{
+						"name": "\\\"metadata\\\":{}}16",
+						"type": "String"
+					},
+					{
+						"name": "{\\\"name\\\":\\\"driverId\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"type\\\":\\\"long\\\"18",
+						"type": "String"
+					},
+					{
+						"name": "\\\"nullable\\\":true19",
+						"type": "String"
+					},
+					{
+						"name": "\\\"metadata\\\":{}}20",
+						"type": "String"
+					},
+					{
+						"name": "{\\\"name\\\":\\\"fastestLap\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"type\\\":\\\"string\\\"22",
+						"type": "String"
+					},
+					{
+						"name": "\\\"nullable\\\":true23",
+						"type": "String"
+					},
+					{
+						"name": "\\\"metadata\\\":{}}24",
+						"type": "String"
+					},
+					{
+						"name": "{\\\"name\\\":\\\"fastestLapSpeed\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"type\\\":\\\"string\\\"26",
+						"type": "String"
+					},
+					{
+						"name": "\\\"nullable\\\":true27",
+						"type": "String"
+					},
+					{
+						"name": "\\\"metadata\\\":{}}28",
+						"type": "String"
+					},
+					{
+						"name": "{\\\"name\\\":\\\"fastestLapTime\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"type\\\":\\\"string\\\"30",
+						"type": "String"
+					},
+					{
+						"name": "\\\"nullable\\\":true31",
+						"type": "String"
+					},
+					{
+						"name": "\\\"metadata\\\":{}}32",
+						"type": "String"
+					},
+					{
+						"name": "{\\\"name\\\":\\\"grid\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"type\\\":\\\"long\\\"34",
+						"type": "String"
+					},
+					{
+						"name": "\\\"nullable\\\":true35",
+						"type": "String"
+					},
+					{
+						"name": "\\\"metadata\\\":{}}36",
+						"type": "String"
+					},
+					{
+						"name": "{\\\"name\\\":\\\"laps\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"type\\\":\\\"long\\\"38",
+						"type": "String"
+					},
+					{
+						"name": "\\\"nullable\\\":true39",
+						"type": "String"
+					},
+					{
+						"name": "\\\"metadata\\\":{}}40",
+						"type": "String"
+					},
+					{
+						"name": "{\\\"name\\\":\\\"milliseconds\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"type\\\":\\\"string\\\"42",
+						"type": "String"
+					},
+					{
+						"name": "\\\"nullable\\\":true43",
+						"type": "String"
+					},
+					{
+						"name": "\\\"metadata\\\":{}}44",
+						"type": "String"
+					},
+					{
+						"name": "{\\\"name\\\":\\\"number\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"type\\\":\\\"long\\\"46",
+						"type": "String"
+					},
+					{
+						"name": "\\\"nullable\\\":true47",
+						"type": "String"
+					},
+					{
+						"name": "\\\"metadata\\\":{}}48",
+						"type": "String"
+					},
+					{
+						"name": "{\\\"name\\\":\\\"points\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"type\\\":\\\"long\\\"50",
+						"type": "String"
+					},
+					{
+						"name": "\\\"nullable\\\":true51",
+						"type": "String"
+					},
+					{
+						"name": "\\\"metadata\\\":{}}52",
+						"type": "String"
+					},
+					{
+						"name": "{\\\"name\\\":\\\"position\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"type\\\":\\\"string\\\"54",
+						"type": "String"
+					},
+					{
+						"name": "\\\"nullable\\\":true55",
+						"type": "String"
+					},
+					{
+						"name": "\\\"metadata\\\":{}}56",
+						"type": "String"
+					},
+					{
+						"name": "{\\\"name\\\":\\\"positionOrder\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"type\\\":\\\"long\\\"58",
+						"type": "String"
+					},
+					{
+						"name": "\\\"nullable\\\":true59",
+						"type": "String"
+					},
+					{
+						"name": "\\\"metadata\\\":{}}60",
+						"type": "String"
+					},
+					{
+						"name": "{\\\"name\\\":\\\"positionText\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"type\\\":\\\"string\\\"62",
+						"type": "String"
+					},
+					{
+						"name": "\\\"nullable\\\":true63",
+						"type": "String"
+					},
+					{
+						"name": "\\\"metadata\\\":{}}64",
+						"type": "String"
+					},
+					{
+						"name": "{\\\"name\\\":\\\"raceId\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"type\\\":\\\"long\\\"66",
+						"type": "String"
+					},
+					{
+						"name": "\\\"nullable\\\":true67",
+						"type": "String"
+					},
+					{
+						"name": "\\\"metadata\\\":{}}68",
+						"type": "String"
+					},
+					{
+						"name": "{\\\"name\\\":\\\"rank\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"type\\\":\\\"long\\\"70",
+						"type": "String"
+					},
+					{
+						"name": "\\\"nullable\\\":true71",
+						"type": "String"
+					},
+					{
+						"name": "\\\"metadata\\\":{}}72",
+						"type": "String"
+					},
+					{
+						"name": "{\\\"name\\\":\\\"resultId\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"type\\\":\\\"long\\\"74",
+						"type": "String"
+					},
+					{
+						"name": "\\\"nullable\\\":true75",
+						"type": "String"
+					},
+					{
+						"name": "\\\"metadata\\\":{}}76",
+						"type": "String"
+					},
+					{
+						"name": "{\\\"name\\\":\\\"statusId\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"type\\\":\\\"long\\\"78",
+						"type": "String"
+					},
+					{
+						"name": "\\\"nullable\\\":true79",
+						"type": "String"
+					},
+					{
+						"name": "\\\"metadata\\\":{}}80",
+						"type": "String"
+					},
+					{
+						"name": "{\\\"name\\\":\\\"time\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"type\\\":\\\"string\\\"82",
+						"type": "String"
+					},
+					{
+						"name": "\\\"nullable\\\":true83",
+						"type": "String"
+					},
+					{
+						"name": "\\\"metadata\\\":{}}]}\"",
+						"type": "String"
+					},
+					{
+						"name": "\"partitionColumns\":[]",
+						"type": "String"
+					},
+					{
+						"name": "\"configuration\":{\"delta.enableDeletionVectors\":\"true\"}",
+						"type": "String"
+					},
+					{
+						"name": "\"createdTime\":1721926522291}",
+						"type": "String"
+					},
+					{
+						"name": "\"protocol\":{\"minReaderVersion\":3",
+						"type": "String"
+					},
+					{
+						"name": "\"minWriterVersion\":7",
+						"type": "String"
+					},
+					{
+						"name": "\"readerFeatures\":[\"deletionVectors\"]",
+						"type": "String"
+					},
+					{
+						"name": "\"writerFeatures\":[\"deletionVectors\"]}",
+						"type": "String"
+					},
+					{
+						"name": "\"histogramOpt\":{\"sortedBinBoundaries\":[0",
+						"type": "String"
+					},
+					{
+						"name": "8192",
+						"type": "String"
+					},
+					{
+						"name": "16384",
+						"type": "String"
+					},
+					{
+						"name": "32768",
+						"type": "String"
+					},
+					{
+						"name": "65536",
+						"type": "String"
+					},
+					{
+						"name": "131072",
+						"type": "String"
+					},
+					{
+						"name": "262144",
+						"type": "String"
+					},
+					{
+						"name": "524288",
+						"type": "String"
+					},
+					{
+						"name": "1048576",
+						"type": "String"
+					},
+					{
+						"name": "2097152",
+						"type": "String"
+					},
+					{
+						"name": "4194304",
+						"type": "String"
+					},
+					{
+						"name": "8388608",
+						"type": "String"
+					},
+					{
+						"name": "12582912",
+						"type": "String"
+					},
+					{
+						"name": "16777216",
+						"type": "String"
+					},
+					{
+						"name": "20971520",
+						"type": "String"
+					},
+					{
+						"name": "25165824",
+						"type": "String"
+					},
+					{
+						"name": "29360128",
+						"type": "String"
+					},
+					{
+						"name": "33554432",
+						"type": "String"
+					},
+					{
+						"name": "37748736",
+						"type": "String"
+					},
+					{
+						"name": "41943040",
+						"type": "String"
+					},
+					{
+						"name": "50331648",
+						"type": "String"
+					},
+					{
+						"name": "58720256",
+						"type": "String"
+					},
+					{
+						"name": "67108864",
+						"type": "String"
+					},
+					{
+						"name": "75497472",
+						"type": "String"
+					},
+					{
+						"name": "83886080",
+						"type": "String"
+					},
+					{
+						"name": "92274688",
+						"type": "String"
+					},
+					{
+						"name": "100663296",
+						"type": "String"
+					},
+					{
+						"name": "109051904",
+						"type": "String"
+					},
+					{
+						"name": "117440512",
+						"type": "String"
+					},
+					{
+						"name": "125829120",
+						"type": "String"
+					},
+					{
+						"name": "130023424",
+						"type": "String"
+					},
+					{
+						"name": "134217728",
+						"type": "String"
+					},
+					{
+						"name": "138412032",
+						"type": "String"
+					},
+					{
+						"name": "142606336",
+						"type": "String"
+					},
+					{
+						"name": "146800640",
+						"type": "String"
+					},
+					{
+						"name": "150994944",
+						"type": "String"
+					},
+					{
+						"name": "167772160",
+						"type": "String"
+					},
+					{
+						"name": "184549376",
+						"type": "String"
+					},
+					{
+						"name": "201326592",
+						"type": "String"
+					},
+					{
+						"name": "218103808",
+						"type": "String"
+					},
+					{
+						"name": "234881024",
+						"type": "String"
+					},
+					{
+						"name": "251658240",
+						"type": "String"
+					},
+					{
+						"name": "268435456",
+						"type": "String"
+					},
+					{
+						"name": "285212672",
+						"type": "String"
+					},
+					{
+						"name": "301989888",
+						"type": "String"
+					},
+					{
+						"name": "318767104",
+						"type": "String"
+					},
+					{
+						"name": "335544320",
+						"type": "String"
+					},
+					{
+						"name": "352321536",
+						"type": "String"
+					},
+					{
+						"name": "369098752",
+						"type": "String"
+					},
+					{
+						"name": "385875968",
+						"type": "String"
+					},
+					{
+						"name": "402653184",
+						"type": "String"
+					},
+					{
+						"name": "419430400",
+						"type": "String"
+					},
+					{
+						"name": "436207616",
+						"type": "String"
+					},
+					{
+						"name": "452984832",
+						"type": "String"
+					},
+					{
+						"name": "469762048",
+						"type": "String"
+					},
+					{
+						"name": "486539264",
+						"type": "String"
+					},
+					{
+						"name": "503316480",
+						"type": "String"
+					},
+					{
+						"name": "520093696",
+						"type": "String"
+					},
+					{
+						"name": "536870912",
+						"type": "String"
+					},
+					{
+						"name": "553648128",
+						"type": "String"
+					},
+					{
+						"name": "570425344",
+						"type": "String"
+					},
+					{
+						"name": "587202560",
+						"type": "String"
+					},
+					{
+						"name": "603979776",
+						"type": "String"
+					},
+					{
+						"name": "671088640",
+						"type": "String"
+					},
+					{
+						"name": "738197504",
+						"type": "String"
+					},
+					{
+						"name": "805306368",
+						"type": "String"
+					},
+					{
+						"name": "872415232",
+						"type": "String"
+					},
+					{
+						"name": "939524096",
+						"type": "String"
+					},
+					{
+						"name": "1006632960",
+						"type": "String"
+					},
+					{
+						"name": "1073741824",
+						"type": "String"
+					},
+					{
+						"name": "1140850688",
+						"type": "String"
+					},
+					{
+						"name": "1207959552",
+						"type": "String"
+					},
+					{
+						"name": "1275068416",
+						"type": "String"
+					},
+					{
+						"name": "1342177280",
+						"type": "String"
+					},
+					{
+						"name": "1409286144",
+						"type": "String"
+					},
+					{
+						"name": "1476395008",
+						"type": "String"
+					},
+					{
+						"name": "1610612736",
+						"type": "String"
+					},
+					{
+						"name": "1744830464",
+						"type": "String"
+					},
+					{
+						"name": "1879048192",
+						"type": "String"
+					},
+					{
+						"name": "2013265920",
+						"type": "String"
+					},
+					{
+						"name": "2147483648",
+						"type": "String"
+					},
+					{
+						"name": "2415919104",
+						"type": "String"
+					},
+					{
+						"name": "2684354560",
+						"type": "String"
+					},
+					{
+						"name": "2952790016",
+						"type": "String"
+					},
+					{
+						"name": "3221225472",
+						"type": "String"
+					},
+					{
+						"name": "3489660928",
+						"type": "String"
+					},
+					{
+						"name": "3758096384",
+						"type": "String"
+					},
+					{
+						"name": "4026531840",
+						"type": "String"
+					},
+					{
+						"name": "4294967296",
+						"type": "String"
+					},
+					{
+						"name": "8589934592",
+						"type": "String"
+					},
+					{
+						"name": "17179869184",
+						"type": "String"
+					},
+					{
+						"name": "34359738368",
+						"type": "String"
+					},
+					{
+						"name": "68719476736",
+						"type": "String"
+					},
+					{
+						"name": "137438953472",
+						"type": "String"
+					},
+					{
+						"name": "274877906944]",
+						"type": "String"
+					},
+					{
+						"name": "\"fileCounts\":[1",
+						"type": "String"
+					},
+					{
+						"name": "0188",
+						"type": "String"
+					},
+					{
+						"name": "0189",
+						"type": "String"
+					},
+					{
+						"name": "0190",
+						"type": "String"
+					},
+					{
+						"name": "0191",
+						"type": "String"
+					},
+					{
+						"name": "0192",
+						"type": "String"
+					},
+					{
+						"name": "0193",
+						"type": "String"
+					},
+					{
+						"name": "0194",
+						"type": "String"
+					},
+					{
+						"name": "0195",
+						"type": "String"
+					},
+					{
+						"name": "0196",
+						"type": "String"
+					},
+					{
+						"name": "0197",
+						"type": "String"
+					},
+					{
+						"name": "0198",
+						"type": "String"
+					},
+					{
+						"name": "0199",
+						"type": "String"
+					},
+					{
+						"name": "0200",
+						"type": "String"
+					},
+					{
+						"name": "0201",
+						"type": "String"
+					},
+					{
+						"name": "0202",
+						"type": "String"
+					},
+					{
+						"name": "0203",
+						"type": "String"
+					},
+					{
+						"name": "0204",
+						"type": "String"
+					},
+					{
+						"name": "0205",
+						"type": "String"
+					},
+					{
+						"name": "0206",
+						"type": "String"
+					},
+					{
+						"name": "0207",
+						"type": "String"
+					},
+					{
+						"name": "0208",
+						"type": "String"
+					},
+					{
+						"name": "0209",
+						"type": "String"
+					},
+					{
+						"name": "0210",
+						"type": "String"
+					},
+					{
+						"name": "0211",
+						"type": "String"
+					},
+					{
+						"name": "0212",
+						"type": "String"
+					},
+					{
+						"name": "0213",
+						"type": "String"
+					},
+					{
+						"name": "0214",
+						"type": "String"
+					},
+					{
+						"name": "0215",
+						"type": "String"
+					},
+					{
+						"name": "0216",
+						"type": "String"
+					},
+					{
+						"name": "0217",
+						"type": "String"
+					},
+					{
+						"name": "0218",
+						"type": "String"
+					},
+					{
+						"name": "0219",
+						"type": "String"
+					},
+					{
+						"name": "0220",
+						"type": "String"
+					},
+					{
+						"name": "0221",
+						"type": "String"
+					},
+					{
+						"name": "0222",
+						"type": "String"
+					},
+					{
+						"name": "0223",
+						"type": "String"
+					},
+					{
+						"name": "0224",
+						"type": "String"
+					},
+					{
+						"name": "0225",
+						"type": "String"
+					},
+					{
+						"name": "0226",
+						"type": "String"
+					},
+					{
+						"name": "0227",
+						"type": "String"
+					},
+					{
+						"name": "0228",
+						"type": "String"
+					},
+					{
+						"name": "0229",
+						"type": "String"
+					},
+					{
+						"name": "0230",
+						"type": "String"
+					},
+					{
+						"name": "0231",
+						"type": "String"
+					},
+					{
+						"name": "0232",
+						"type": "String"
+					},
+					{
+						"name": "0233",
+						"type": "String"
+					},
+					{
+						"name": "0234",
+						"type": "String"
+					},
+					{
+						"name": "0235",
+						"type": "String"
+					},
+					{
+						"name": "0236",
+						"type": "String"
+					},
+					{
+						"name": "0237",
+						"type": "String"
+					},
+					{
+						"name": "0238",
+						"type": "String"
+					},
+					{
+						"name": "0239",
+						"type": "String"
+					},
+					{
+						"name": "0240",
+						"type": "String"
+					},
+					{
+						"name": "0241",
+						"type": "String"
+					},
+					{
+						"name": "0242",
+						"type": "String"
+					},
+					{
+						"name": "0243",
+						"type": "String"
+					},
+					{
+						"name": "0244",
+						"type": "String"
+					},
+					{
+						"name": "0245",
+						"type": "String"
+					},
+					{
+						"name": "0246",
+						"type": "String"
+					},
+					{
+						"name": "0247",
+						"type": "String"
+					},
+					{
+						"name": "0248",
+						"type": "String"
+					},
+					{
+						"name": "0249",
+						"type": "String"
+					},
+					{
+						"name": "0250",
+						"type": "String"
+					},
+					{
+						"name": "0251",
+						"type": "String"
+					},
+					{
+						"name": "0252",
+						"type": "String"
+					},
+					{
+						"name": "0253",
+						"type": "String"
+					},
+					{
+						"name": "0254",
+						"type": "String"
+					},
+					{
+						"name": "0255",
+						"type": "String"
+					},
+					{
+						"name": "0256",
+						"type": "String"
+					},
+					{
+						"name": "0257",
+						"type": "String"
+					},
+					{
+						"name": "0258",
+						"type": "String"
+					},
+					{
+						"name": "0259",
+						"type": "String"
+					},
+					{
+						"name": "0260",
+						"type": "String"
+					},
+					{
+						"name": "0261",
+						"type": "String"
+					},
+					{
+						"name": "0262",
+						"type": "String"
+					},
+					{
+						"name": "0263",
+						"type": "String"
+					},
+					{
+						"name": "0264",
+						"type": "String"
+					},
+					{
+						"name": "0265",
+						"type": "String"
+					},
+					{
+						"name": "0266",
+						"type": "String"
+					},
+					{
+						"name": "0267",
+						"type": "String"
+					},
+					{
+						"name": "0268",
+						"type": "String"
+					},
+					{
+						"name": "0269",
+						"type": "String"
+					},
+					{
+						"name": "0270",
+						"type": "String"
+					},
+					{
+						"name": "0271",
+						"type": "String"
+					},
+					{
+						"name": "0272",
+						"type": "String"
+					},
+					{
+						"name": "0273",
+						"type": "String"
+					},
+					{
+						"name": "0274",
+						"type": "String"
+					},
+					{
+						"name": "0275",
+						"type": "String"
+					},
+					{
+						"name": "0276",
+						"type": "String"
+					},
+					{
+						"name": "0277",
+						"type": "String"
+					},
+					{
+						"name": "0278",
+						"type": "String"
+					},
+					{
+						"name": "0279",
+						"type": "String"
+					},
+					{
+						"name": "0280",
+						"type": "String"
+					},
+					{
+						"name": "0]",
+						"type": "String"
+					},
+					{
+						"name": "\"totalBytes\":[6605",
+						"type": "String"
+					},
+					{
+						"name": "0283",
+						"type": "String"
+					},
+					{
+						"name": "0284",
+						"type": "String"
+					},
+					{
+						"name": "0285",
+						"type": "String"
+					},
+					{
+						"name": "0286",
+						"type": "String"
+					},
+					{
+						"name": "0287",
+						"type": "String"
+					},
+					{
+						"name": "0288",
+						"type": "String"
+					},
+					{
+						"name": "0289",
+						"type": "String"
+					},
+					{
+						"name": "0290",
+						"type": "String"
+					},
+					{
+						"name": "0291",
+						"type": "String"
+					},
+					{
+						"name": "0292",
+						"type": "String"
+					},
+					{
+						"name": "0293",
+						"type": "String"
+					},
+					{
+						"name": "0294",
+						"type": "String"
+					},
+					{
+						"name": "0295",
+						"type": "String"
+					},
+					{
+						"name": "0296",
+						"type": "String"
+					},
+					{
+						"name": "0297",
+						"type": "String"
+					},
+					{
+						"name": "0298",
+						"type": "String"
+					},
+					{
+						"name": "0299",
+						"type": "String"
+					},
+					{
+						"name": "0300",
+						"type": "String"
+					},
+					{
+						"name": "0301",
+						"type": "String"
+					},
+					{
+						"name": "0302",
+						"type": "String"
+					},
+					{
+						"name": "0303",
+						"type": "String"
+					},
+					{
+						"name": "0304",
+						"type": "String"
+					},
+					{
+						"name": "0305",
+						"type": "String"
+					},
+					{
+						"name": "0306",
+						"type": "String"
+					},
+					{
+						"name": "0307",
+						"type": "String"
+					},
+					{
+						"name": "0308",
+						"type": "String"
+					},
+					{
+						"name": "0309",
+						"type": "String"
+					},
+					{
+						"name": "0310",
+						"type": "String"
+					},
+					{
+						"name": "0311",
+						"type": "String"
+					},
+					{
+						"name": "0312",
+						"type": "String"
+					},
+					{
+						"name": "0313",
+						"type": "String"
+					},
+					{
+						"name": "0314",
+						"type": "String"
+					},
+					{
+						"name": "0315",
+						"type": "String"
+					},
+					{
+						"name": "0316",
+						"type": "String"
+					},
+					{
+						"name": "0317",
+						"type": "String"
+					},
+					{
+						"name": "0318",
+						"type": "String"
+					},
+					{
+						"name": "0319",
+						"type": "String"
+					},
+					{
+						"name": "0320",
+						"type": "String"
+					},
+					{
+						"name": "0321",
+						"type": "String"
+					},
+					{
+						"name": "0322",
+						"type": "String"
+					},
+					{
+						"name": "0323",
+						"type": "String"
+					},
+					{
+						"name": "0324",
+						"type": "String"
+					},
+					{
+						"name": "0325",
+						"type": "String"
+					},
+					{
+						"name": "0326",
+						"type": "String"
+					},
+					{
+						"name": "0327",
+						"type": "String"
+					},
+					{
+						"name": "0328",
+						"type": "String"
+					},
+					{
+						"name": "0329",
+						"type": "String"
+					},
+					{
+						"name": "0330",
+						"type": "String"
+					},
+					{
+						"name": "0331",
+						"type": "String"
+					},
+					{
+						"name": "0332",
+						"type": "String"
+					},
+					{
+						"name": "0333",
+						"type": "String"
+					},
+					{
+						"name": "0334",
+						"type": "String"
+					},
+					{
+						"name": "0335",
+						"type": "String"
+					},
+					{
+						"name": "0336",
+						"type": "String"
+					},
+					{
+						"name": "0337",
+						"type": "String"
+					},
+					{
+						"name": "0338",
+						"type": "String"
+					},
+					{
+						"name": "0339",
+						"type": "String"
+					},
+					{
+						"name": "0340",
+						"type": "String"
+					},
+					{
+						"name": "0341",
+						"type": "String"
+					},
+					{
+						"name": "0342",
+						"type": "String"
+					},
+					{
+						"name": "0343",
+						"type": "String"
+					},
+					{
+						"name": "0344",
+						"type": "String"
+					},
+					{
+						"name": "0345",
+						"type": "String"
+					},
+					{
+						"name": "0346",
+						"type": "String"
+					},
+					{
+						"name": "0347",
+						"type": "String"
+					},
+					{
+						"name": "0348",
+						"type": "String"
+					},
+					{
+						"name": "0349",
+						"type": "String"
+					},
+					{
+						"name": "0350",
+						"type": "String"
+					},
+					{
+						"name": "0351",
+						"type": "String"
+					},
+					{
+						"name": "0352",
+						"type": "String"
+					},
+					{
+						"name": "0353",
+						"type": "String"
+					},
+					{
+						"name": "0354",
+						"type": "String"
+					},
+					{
+						"name": "0355",
+						"type": "String"
+					},
+					{
+						"name": "0356",
+						"type": "String"
+					},
+					{
+						"name": "0357",
+						"type": "String"
+					},
+					{
+						"name": "0358",
+						"type": "String"
+					},
+					{
+						"name": "0359",
+						"type": "String"
+					},
+					{
+						"name": "0360",
+						"type": "String"
+					},
+					{
+						"name": "0361",
+						"type": "String"
+					},
+					{
+						"name": "0362",
+						"type": "String"
+					},
+					{
+						"name": "0363",
+						"type": "String"
+					},
+					{
+						"name": "0364",
+						"type": "String"
+					},
+					{
+						"name": "0365",
+						"type": "String"
+					},
+					{
+						"name": "0366",
+						"type": "String"
+					},
+					{
+						"name": "0367",
+						"type": "String"
+					},
+					{
+						"name": "0368",
+						"type": "String"
+					},
+					{
+						"name": "0369",
+						"type": "String"
+					},
+					{
+						"name": "0370",
+						"type": "String"
+					},
+					{
+						"name": "0371",
+						"type": "String"
+					},
+					{
+						"name": "0372",
+						"type": "String"
+					},
+					{
+						"name": "0373",
+						"type": "String"
+					},
+					{
+						"name": "0374",
+						"type": "String"
+					},
+					{
+						"name": "0375",
+						"type": "String"
+					},
+					{
+						"name": "0]}376",
+						"type": "String"
+					},
+					{
+						"name": "\"deletedRecordCountsHistogramOpt\":{\"deletedRecordCounts\":[1",
+						"type": "String"
+					},
+					{
+						"name": "0378",
+						"type": "String"
+					},
+					{
+						"name": "0379",
+						"type": "String"
+					},
+					{
+						"name": "0380",
+						"type": "String"
+					},
+					{
+						"name": "0381",
+						"type": "String"
+					},
+					{
+						"name": "0382",
+						"type": "String"
+					},
+					{
+						"name": "0383",
+						"type": "String"
+					},
+					{
+						"name": "0384",
+						"type": "String"
+					},
+					{
+						"name": "0385",
+						"type": "String"
+					},
+					{
+						"name": "0]}386",
+						"type": "String"
+					},
+					{
+						"name": "\"allFiles\":[{\"path\":\"part-00000-e1d687a2-9acb-48b5-be74-6197f529d551-c000.snappy.parquet\"",
+						"type": "String"
+					},
+					{
+						"name": "\"partitionValues\":{}",
+						"type": "String"
+					},
+					{
+						"name": "\"size\":6605",
+						"type": "String"
+					},
+					{
+						"name": "\"modificationTime\":1721926527000",
+						"type": "String"
+					},
+					{
+						"name": "\"dataChange\":false",
+						"type": "String"
+					},
+					{
+						"name": "\"stats\":\"{\\\"numRecords\\\":20",
+						"type": "String"
+					},
+					{
+						"name": "\\\"minValues\\\":{\\\"constructorId\\\":1",
+						"type": "String"
+					},
+					{
+						"name": "\\\"driverId\\\":1",
+						"type": "String"
+					},
+					{
+						"name": "\\\"fastestLap\\\":\\\"16\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"fastestLapSpeed\\\":\\\"201.685\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"fastestLapTime\\\":\\\"1:32.090\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"grid\\\":0398",
+						"type": "String"
+					},
+					{
+						"name": "\\\"laps\\\":0399",
+						"type": "String"
+					},
+					{
+						"name": "\\\"milliseconds\\\":\\\"5523897\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"number\\\":3",
+						"type": "String"
+					},
+					{
+						"name": "\\\"points\\\":0402",
+						"type": "String"
+					},
+					{
+						"name": "\\\"position\\\":\\\"1\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"positionOrder\\\":1",
+						"type": "String"
+					},
+					{
+						"name": "\\\"positionText\\\":\\\"1\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"raceId\\\":1052406",
+						"type": "String"
+					},
+					{
+						"name": "\\\"rank\\\":0407",
+						"type": "String"
+					},
+					{
+						"name": "\\\"resultId\\\":24966",
+						"type": "String"
+					},
+					{
+						"name": "\\\"statusId\\\":1",
+						"type": "String"
+					},
+					{
+						"name": "\\\"time\\\":\\\"+0.745\\\"}",
+						"type": "String"
+					},
+					{
+						"name": "\\\"maxValues\\\":{\\\"constructorId\\\":214",
+						"type": "String"
+					},
+					{
+						"name": "\\\"driverId\\\":854",
+						"type": "String"
+					},
+					{
+						"name": "\\\"fastestLap\\\":\\\"\\\\\\\\N\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"fastestLapSpeed\\\":\\\"\\\\\\\\N\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"fastestLapTime\\\":\\\"\\\\\\\\N\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"grid\\\":20",
+						"type": "String"
+					},
+					{
+						"name": "\\\"laps\\\":56",
+						"type": "String"
+					},
+					{
+						"name": "\\\"milliseconds\\\":\\\"\\\\\\\\N\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"number\\\":99",
+						"type": "String"
+					},
+					{
+						"name": "\\\"points\\\":25",
+						"type": "String"
+					},
+					{
+						"name": "\\\"position\\\":\\\"\\\\\\\\N\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"positionOrder\\\":20",
+						"type": "String"
+					},
+					{
+						"name": "\\\"positionText\\\":\\\"R\\\"",
+						"type": "String"
+					},
+					{
+						"name": "\\\"raceId\\\":1052424",
+						"type": "String"
+					},
+					{
+						"name": "\\\"rank\\\":19",
+						"type": "String"
+					},
+					{
+						"name": "\\\"resultId\\\":24985",
+						"type": "String"
+					},
+					{
+						"name": "\\\"statusId\\\":31",
+						"type": "String"
+					},
+					{
+						"name": "\\\"time\\\":\\\"\\\\\\\\N\\\"}",
+						"type": "String"
+					},
+					{
+						"name": "\\\"nullCount\\\":{\\\"constructorId\\\":0",
+						"type": "String"
+					},
+					{
+						"name": "\\\"driverId\\\":0",
+						"type": "String"
+					},
+					{
+						"name": "\\\"fastestLap\\\":0",
+						"type": "String"
+					},
+					{
+						"name": "\\\"fastestLapSpeed\\\":0",
+						"type": "String"
+					},
+					{
+						"name": "\\\"fastestLapTime\\\":0",
+						"type": "String"
+					},
+					{
+						"name": "\\\"grid\\\":0434",
+						"type": "String"
+					},
+					{
+						"name": "\\\"laps\\\":0435",
+						"type": "String"
+					},
+					{
+						"name": "\\\"milliseconds\\\":0",
+						"type": "String"
+					},
+					{
+						"name": "\\\"number\\\":0",
+						"type": "String"
+					},
+					{
+						"name": "\\\"points\\\":0438",
+						"type": "String"
+					},
+					{
+						"name": "\\\"position\\\":0",
+						"type": "String"
+					},
+					{
+						"name": "\\\"positionOrder\\\":0",
+						"type": "String"
+					},
+					{
+						"name": "\\\"positionText\\\":0",
+						"type": "String"
+					},
+					{
+						"name": "\\\"raceId\\\":0",
+						"type": "String"
+					},
+					{
+						"name": "\\\"rank\\\":0443",
+						"type": "String"
+					},
+					{
+						"name": "\\\"resultId\\\":0",
+						"type": "String"
+					},
+					{
+						"name": "\\\"statusId\\\":0",
+						"type": "String"
+					},
+					{
+						"name": "\\\"time\\\":0}",
+						"type": "String"
+					},
+					{
+						"name": "\\\"tightBounds\\\":true}\"",
+						"type": "String"
+					},
+					{
+						"name": "\"tags\":{\"INSERTION_TIME\":\"1721926527000000\"",
+						"type": "String"
+					},
+					{
+						"name": "\"MIN_INSERTION_TIME\":\"1721926527000000\"",
+						"type": "String"
+					},
+					{
+						"name": "\"MAX_INSERTION_TIME\":\"1721926527000000\"",
+						"type": "String"
+					},
+					{
+						"name": "\"OPTIMIZE_TARGET_SIZE\":\"268435456\"}}]}",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/output1')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureBlobStorage1",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"container": "demo"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "circuitId",
+						"type": "String"
+					},
+					{
+						"name": "circuitRef",
+						"type": "String"
+					},
+					{
+						"name": "name",
+						"type": "String"
+					},
+					{
+						"name": "location",
+						"type": "String"
+					},
+					{
+						"name": "country",
+						"type": "String"
+					},
+					{
+						"name": "lat",
+						"type": "String"
+					},
+					{
+						"name": "lng",
+						"type": "String"
+					},
+					{
+						"name": "alt",
+						"type": "String"
+					},
+					{
+						"name": "url",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/pipelinedemo')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Copy data active",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "DelimitedTextSource",
+								"storeSettings": {
+									"type": "AzureBlobStorageReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
+								},
+								"formatSettings": {
+									"type": "DelimitedTextReadSettings"
+								}
+							},
+							"sink": {
+								"type": "DelimitedTextSink",
+								"storeSettings": {
+									"type": "AzureBlobStorageWriteSettings"
+								},
+								"formatSettings": {
+									"type": "DelimitedTextWriteSettings",
+									"quoteAllText": true,
+									"fileExtension": ".txt"
+								}
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"typeConversion": true,
+								"typeConversionSettings": {
+									"allowDataTruncation": true,
+									"treatBooleanAsNumber": false
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "inputsource1",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "output1",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/inputsource1')]",
+				"[concat(variables('factoryId'), '/datasets/output1')]"
+			]
 		}
 	]
 }
