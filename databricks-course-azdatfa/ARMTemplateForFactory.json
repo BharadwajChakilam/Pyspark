@@ -2009,6 +2009,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobStorageLocation",
+						"fileName": "output1.csv",
 						"container": "demo"
 					},
 					"columnDelimiter": ",",
