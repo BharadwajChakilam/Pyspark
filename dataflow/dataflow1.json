@@ -22,7 +22,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "output1",
+						"referenceName": "outputdflow",
 						"type": "DatasetReference"
 					},
 					"name": "sink1"
@@ -69,17 +69,6 @@
 				"     broadcast: 'auto')~> join1",
 				"join1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     input(",
-				"          circuitId as string,",
-				"          circuitRef as string,",
-				"          name as string,",
-				"          location as string,",
-				"          country as string,",
-				"          lat as string,",
-				"          lng as string,",
-				"          alt as string,",
-				"          url as string",
-				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> sink1"
 			]
