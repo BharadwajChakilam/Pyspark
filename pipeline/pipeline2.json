@@ -23,7 +23,21 @@
 						"coreCount": 8,
 						"computeType": "General"
 					},
-					"queries": []
+					"queries": [
+						{
+							"queryName": "UserQuery",
+							"dataflowSinks": [
+								{
+									"name": "UserQueryoutputpq",
+									"dataset": {
+										"referenceName": "outputpq",
+										"type": "DatasetReference"
+									},
+									"script": "sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tinput(\n\t\tcircuitId as string,\n\t\tcircuitRef as string,\n\t\tname as string,\n\t\tlocation as string,\n\t\tcountry as string,\n\t\tlat as string,\n\t\tlng as string,\n\t\talt as string,\n\t\turl as string\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> UserQueryoutputpq"
+								}
+							]
+						}
+					]
 				}
 			}
 		],
