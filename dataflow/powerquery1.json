@@ -13,7 +13,7 @@
 					}
 				}
 			],
-			"script": "section Section1;\r\nshared inputsource1 = let AdfDoc = AzureStorage.BlobContents(\"https://formula1dl1102.blob.core.windows.net/demo/circuits.csv\"),Csv = Csv.Document(AdfDoc, [Delimiter = \",\", Encoding = TextEncoding.Utf8, QuoteStyle = QuoteStyle.Csv]), PromotedHeaders = Table.PromoteHeaders(Csv, [PromoteAllScalars = true]) in  PromotedHeaders;\r\nshared UserQuery = let Source = #\"inputsource1\" in Source;\r\n",
+			"script": "section Section1;\r\nshared inputsource1 = let AdfDoc = AzureStorage.BlobContents(\"https://formula1dl1102.blob.core.windows.net/demo/circuits.csv\"),Csv = Csv.Document(AdfDoc, [Delimiter = \",\", Encoding = TextEncoding.Utf8, QuoteStyle = QuoteStyle.Csv]), PromotedHeaders = Table.PromoteHeaders(Csv, [PromoteAllScalars = true]) in  PromotedHeaders;\r\nshared UserQuery = let Source = #\"inputsource1\",\r\n  #\"Filtered rows\" = Table.SelectRows(Source, each ([country] = \"Australia\" or [country] = \"India\" or [country] = \"Malaysia\" or [country] = \"Mexico\")) in #\"Filtered rows\";\r\n",
 			"documentLocale": "en-us"
 		}
 	}
